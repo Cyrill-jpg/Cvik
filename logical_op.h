@@ -57,9 +57,7 @@ SETOFINT *soi_union(SETOFINT *a, SETOFINT *b) {
                 temp[s] = b->element[j];
                 s++;
                 j++;
-
             }
-
             else {
                 temp[s] = a->element[i];
                 s++;
@@ -144,6 +142,7 @@ SETOFINT *soi_sym_difference(SETOFINT *a, SETOFINT *b) {
             }
         }
     }while ( i < a->size && j < b->size);
+
     if (i >= a->size) for (j; j< b->size; j++) {
         temp[s] = b->element[j];
         s++;
